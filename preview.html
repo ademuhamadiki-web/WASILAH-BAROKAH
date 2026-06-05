@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Murah FF</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0b1220;
+    color:#fff;
+}
+
+header{
+    background:linear-gradient(135deg,#ff3d3d,#ffb300);
+    text-align:center;
+    padding:18px;
+}
+
+header h1{margin:0;font-size:20px;}
+header p{margin:5px 0;font-size:12px;opacity:0.9;}
+
+.banner{
+    background:#111c33;
+    text-align:center;
+    padding:10px;
+    font-size:13px;
+    color:#ffd700;
+}
+
+.container{padding:12px;}
+
+.card{
+    background:#16233d;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:10px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    margin:3px 0;
+}
+
+.title{
+    font-weight:bold;
+    font-size:15px;
+}
+
+.market{
+    text-decoration:line-through;
+    color:#ff6b6b;
+}
+
+.price{
+    font-size:18px;
+    font-weight:bold;
+    color:#00ff9d;
+}
+
+.badge{
+    background:#ffb300;
+    color:#000;
+    padding:2px 8px;
+    border-radius:8px;
+    font-size:11px;
+}
+
+button{
+    width:100%;
+    margin-top:8px;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#25D366;
+    color:#fff;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    font-size:11px;
+    padding:15px;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔥 DIAMOND FF TERMURAH 🔥</h1>
+<p>Fast Proses • Aman • Banyak Repeat Order</p>
+</header>
+
+<div class="banner">
+💎 Harga promo khusus hari ini (stok cepat habis)
+</div>
+
+<div class="container" id="list"></div>
+
+<footer>
+© Top Up Store • Order via WhatsApp 24 Jam
+</footer>
+
+<script>
+
+let data = [
+{d:"5",m:"1500",p:999},
+{d:"10",m:"3000",p:1990},
+{d:"12",m:"3500",p:1990},
+{d:"20",m:"5000",p:3490},
+{d:"25",m:"6000",p:4490},
+{d:"30",m:"7000",p:5490},
+{d:"50",m:"9000",p:6990},
+{d:"55",m:"10000",p:7990},
+{d:"70",m:"12000",p:9490},
+{d:"75",m:"13000",p:10490},
+{d:"80",m:"14000",p:11490},
+{d:"90",m:"16000",p:12490},
+{d:"100",m:"17000",p:13490},
+{d:"120",m:"20000",p:16490},
+{d:"140",m:"22000",p:18490},
+{d:"145",m:"23000",p:19490},
+{d:"150",m:"24000",p:20490},
+{d:"160",m:"26000",p:21490},
+{d:"170",m:"28000",p:23490},
+{d:"190",m:"30000",p:25490},
+{d:"210",m:"33000",p:27490},
+{d:"280",m:"42000",p:34990},
+{d:"300",m:"46000",p:37990},
+{d:"355",m:"53000",p:42990},
+{d:"405",m:"60000",p:48990},
+{d:"425",m:"63000",p:50990},
+{d:"475",m:"70000",p:56990},
+{d:"495",m:"73000",p:58990},
+{d:"500",m:"74000",p:59990},
+{d:"510",m:"76000",p:61990},
+{d:"545",m:"80000",p:64990},
+{d:"565",m:"84000",p:67990},
+{d:"635",m:"93000",p:74990},
+{d:"720",m:"102000",p:81990},
+{d:"725",m:"103000",p:82990},
+{d:"740",m:"105000",p:84990},
+{d:"770",m:"109000",p:87990},
+{d:"790",m:"112000",p:89990},
+{d:"860",m:"121000",p:96990},
+{d:"930",m:"131000",p:104990},
+{d:"1000",m:"140000",p:111990}
+];
+
+function wa(item){
+let nomor="6282320890853";
+let url="https://wa.me/"+nomor+"?text="+encodeURIComponent("Halo kak saya mau order "+item);
+window.open(url,"_blank");
+}
+
+let html="";
+data.forEach(x=>{
+html+=`
+<div class="card">
+<div class="row title">💎 ${x.d} Diamond <span class="badge">HOT</span></div>
+<div class="row"><span>Harga Pasar</span><span class="market">Rp${parseInt(x.m).toLocaleString('id-ID')}</span></div>
+<div class="row price">Rp${x.p.toLocaleString('id-ID')}</div>
+<button onclick="wa('${x.d} Diamond - Rp${x.p.toLocaleString('id-ID')}')">
+Beli Sekarang
+</button>
+</div>
+`;
+});
+
+document.getElementById("list").innerHTML=html;
+
+</script>
+
+</body>
+</html>
