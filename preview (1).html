@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WASHILAH BAROKAH - TOP UP FF</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#0b1220;
+color:#fff;
+}
+
+header{
+background:linear-gradient(135deg,#1abc9c,#f1c40f);
+padding:25px;
+text-align:center;
+}
+
+header h1{margin:0;font-size:22px;}
+header p{margin:5px 0;}
+
+.container{
+padding:10px;
+}
+
+.card{
+background:#16233d;
+margin:10px 0;
+padding:15px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.diamond{
+font-size:18px;
+font-weight:bold;
+}
+
+.old{
+text-decoration:line-through;
+color:#ff6b6b;
+font-size:14px;
+}
+
+.new{
+color:#00ff9d;
+font-size:20px;
+font-weight:bold;
+margin:5px 0;
+}
+
+.btn{
+width:100%;
+padding:10px;
+background:#25D366;
+color:white;
+border:none;
+border-radius:8px;
+font-size:14px;
+cursor:pointer;
+}
+
+.note{
+text-align:center;
+font-size:12px;
+opacity:0.7;
+margin-top:10px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>💎 WASHILAH BAROKAH</h1>
+<p>Top Up Free Fire - Cepat • Aman • Murah</p>
+</header>
+
+<div class="container" id="list"></div>
+
+<div class="note">
+Order otomatis via WhatsApp • 24 Jam Online
+</div>
+
+<script>
+
+let waNumber = "6282320890853";
+
+let data = [
+{d:5,p:999,o:1500},
+{d:10,p:1999,o:3000},
+{d:12,p:1999,o:3500},
+{d:20,p:3499,o:5000},
+{d:25,p:4499,o:6000},
+{d:30,p:5499,o:7000},
+{d:50,p:6999,o:9000},
+{d:55,p:7999,o:10000},
+{d:70,p:9499,o:12000},
+{d:75,p:10499,o:13000},
+{d:80,p:11499,o:14000},
+{d:90,p:12499,o:16000},
+{d:100,p:13999,o:17000},
+{d:120,p:16999,o:20000},
+{d:140,p:18499,o:22000},
+{d:145,p:19499,o:23000},
+{d:150,p:20499,o:24000},
+{d:160,p:21499,o:26000},
+{d:170,p:23499,o:28000},
+{d:190,p:25499,o:30000},
+{d:210,p:27499,o:33000},
+{d:280,p:34999,o:42000},
+{d:300,p:37999,o:46000},
+{d:355,p:42999,o:53000},
+{d:405,p:48999,o:60000},
+{d:425,p:50999,o:63000},
+{d:475,p:56999,o:70000},
+{d:495,p:58999,o:73000},
+{d:500,p:59999,o:74000},
+{d:510,p:61999,o:76000},
+{d:545,p:65999,o:80000},
+{d:565,p:69999,o:84000},
+{d:635,p:77999,o:93000},
+{d:720,p:85999,o:102000},
+{d:725,p:86999,o:103000},
+{d:740,p:88999,o:105000},
+{d:770,p:91999,o:109000},
+{d:790,p:93999,o:112000},
+{d:860,p:101999,o:121000},
+{d:930,p:109999,o:131000},
+{d:1000,p:119999,o:140000},
+{d:1075,p:129999,o:149000},
+{d:1440,p:184999,o:195000},
+{d:1450,p:184999,o:197000},
+{d:2000,p:259999,o:274000},
+{d:2020,p:259999,o:277000},
+{d:2160,p:274999,o:294000},
+{d:2880,p:364999,o:389000},
+{d:3600,p:459999,o:484000},
+{d:4320,p:549999,o:579000},
+{d:7290,p:919999,o:969000}
+];
+
+function wa(text){
+window.open("https://wa.me/"+waNumber+"?text="+encodeURIComponent(text));
+}
+
+let html="";
+
+data.forEach(x=>{
+html+=`
+<div class="card">
+<div class="diamond">💎 ${x.d} Diamond</div>
+
+<div class="old">Rp ${x.o.toLocaleString()}</div>
+<div class="new">Rp ${x.p.toLocaleString()}</div>
+
+<button class="btn"
+onclick="wa('Halo admin WASHILAH BAROKAH, saya mau order ${x.d} Diamond Free Fire harga Rp${x.p}')">
+🟢 Order Sekarang
+</button>
+</div>
+`;
+});
+
+document.getElementById("list").innerHTML=html;
+
+</script>
+
+</body>
+</html>
